@@ -23,9 +23,13 @@ public class Task {
                 }
             }
             // Минимальное
-            if (numbers[i] < min) min = numbers[i];
+            if (numbers[i] < min) {
+                min = numbers[i];
+            }
             // Максимальное
-            if (numbers[i] > max) max = numbers[i];
+            if (numbers[i] > max) {
+                max = numbers[i];
+            }
         }
         System.out.println("Even: " + even);
         System.out.println("Not even: " + notEven);
@@ -42,7 +46,7 @@ public class Task {
         }
         //вывод
         System.out.print("Fibonacci numbers:");
-        for (int i = 0; i < countDig; i++) {
+        for (int i = 0; i < fibanachyDig.length; i++) {
             System.out.print(fibanachyDig[i] + (i == countDig - 1 ? "" : ","));
         }
     }
