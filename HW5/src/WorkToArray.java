@@ -42,7 +42,6 @@ public class WorkToArray {
     }
 
     public void searchForDifferentNumbersInArray() {
-        // int[] numbers = {3333, 11, 22, 30, 1234, 5555, 4444};
         for (int number : numbers) {
             if (isDifferentNumber(number)) {
                 System.out.println(number);
