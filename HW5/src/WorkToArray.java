@@ -41,30 +41,37 @@ public class WorkToArray {
         return isSubsequence;
     }
 
-    public int[] searchForDifferentNumbersInArray() {
-        int[] differentNumbers = new int[numbers.length];
-        int j = 0;
+    public void searchForDifferentNumbersInArray() {
+        // int[] numbers = {3333, 11, 22, 30, 1234, 5555, 4444};
         for (int number : numbers) {
-            int[] digitsCountIndex = new int[10];
-            int allDigits = 0, differentDigitsCount = 0;
-            int numbersArray = number;
-            while (numbersArray != 0) {
-                int indexM = (numbersArray % 10);
-                digitsCountIndex[indexM]++;
-                numbersArray /= 10;
-                allDigits++;
-                if (digitsCountIndex[indexM] == 1) {
-                    differentDigitsCount++;
-                }
-            }
-            if (allDigits == differentDigitsCount) {
-                differentNumbers[j] = number;
+            if (isDifferentNumber(number)) {
                 System.out.println(number);
-                j++;
+            }
+
+        }
+    }
+
+    public boolean isDifferentNumber(int number) {
+        int[] digitsCountIndex = new int[10];
+        int allDigits = 0, differentDigitsCount = 0;
+        int numbersArray = number;
+        while (numbersArray != 0) {
+            int indexM = (numbersArray % 10);
+            digitsCountIndex[indexM]++;
+            numbersArray /= 10;
+            allDigits++;
+            if (digitsCountIndex[indexM] == 1) {
+                differentDigitsCount++;
             }
         }
-        return differentNumbers;
+        if (allDigits == differentDigitsCount) {
+
+            System.out.println(number);
+            return true;
+        }
+        return false;
     }
+
 
     public String outSqrMatrix(int k) {
         int index = 1;
