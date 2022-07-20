@@ -6,9 +6,10 @@ public class Task3 {
     }
 
     private static int sumNumber(int number) {
-        if (number < 10)
+        if (number < 10) {
             return number;
-        else
+        } else {
             return (number % 10) + sumNumber(number / 10);
+        }
     }
 }
