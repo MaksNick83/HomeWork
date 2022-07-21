@@ -10,10 +10,6 @@ class CarProcessor {
         this.cars = new Car[]{};
     }
 
-    public void setCars(Car[] cars) {
-        this.cars = cars;
-
-    }
 
     void listCarsBrand(String brand, Car[] cars) {
         for (Car car : cars) {

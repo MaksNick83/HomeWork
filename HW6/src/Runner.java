@@ -11,7 +11,6 @@ public class Runner {
         Car car7 = new Car("Volvo", "xc70", 2000, "black", 6000, "AM1117");
         Car[] cars = {car1, car2, car3, car4, car5, car6, car7};
 
-
         CarProcessor processor = new CarProcessor(cars);
 
         String brand = "BMW";
@@ -25,21 +24,20 @@ public class Runner {
 
         int yearOfIssue = 2001;
         double price = 2000;
+
         System.out.println("---list of cars of a given " + yearOfIssue + " , the price of which is higher than the specified " + price + ". ---");
         processor.listCarsYearManufactureWitchPrice(yearOfIssue, price, cars);
 
-
-        cars = new Car[]{};
-        processor.setCars(cars);
+        CarProcessor processor1 = new CarProcessor();
 
         System.out.println("---list of cars of a given " + brand + "---");
-        processor.listCarsBrand(brand);
+        processor1.listCarsBrand(brand);
 
         System.out.println("---list of cars of a given " + model + " that have been in operation for more than " + operationYear + " years---");
-        processor.listCarsBrandForMoreYears(model, operationYear);
+        processor1.listCarsBrandForMoreYears(model, operationYear);
 
         System.out.println("---list of cars of a given " + yearOfIssue + " , the price of which is higher than the specified " + price + ". ---");
-        processor.listCarsYearManufactureWitchPrice(yearOfIssue, price);
+        processor1.listCarsYearManufactureWitchPrice(yearOfIssue, price);
 
 
     }
