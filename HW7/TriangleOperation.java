@@ -1,5 +1,3 @@
-package com.nikitchyn.homework7;
-
 public class TriangleOperation {
     private Triangle[] triangles;
 
