@@ -14,8 +14,8 @@ public class TaxiDepotOperation {
         return taxiDepots;
     }
 
-    public double totalCost() {
-        double cost = 0;
+    public int totalCost() {
+        int cost = 0;
         for (TaxiDepot taxiDepot : taxiDepots) {
             cost += taxiDepot.cost;
 
@@ -37,6 +37,7 @@ public class TaxiDepotOperation {
 
     }
 
+
     public void printTaxiDepots(TaxiDepot[] taxiDepots) {
         for (TaxiDepot taxiDepot : taxiDepots) {
             System.out.println(taxiDepot);
@@ -48,7 +49,6 @@ public class TaxiDepotOperation {
         for (TaxiDepot taxiDepot : taxiDepots) {
             if (taxiDepot.speed > minSpeed && taxiDepot.speed < maxSpeed) {
                 newTaxiDepots = addTaxi(newTaxiDepots, taxiDepot);
-
             }
         }
         return newTaxiDepots;

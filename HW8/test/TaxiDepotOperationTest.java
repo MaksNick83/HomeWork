@@ -17,28 +17,37 @@ class TaxiDepotOperationTest {
 
     @Test
     void totalCost() {
-        double result = taxiDepotOperation.totalCost();
+        int result = taxiDepotOperation.totalCost();
         Assertions.assertEquals(8500, result);
     }
 
     @Test
     void sortByConsumption() {
         taxiDepotOperation.sortByConsumption();
-        Freight freight1 = new Freight(1000, 100, 10, "Black");
-        Minivan minivan1 = new Minivan(500, 50, 5, 100);
-        Passenger passenger1 = new Passenger(7000, 150, 15, 5);
-        TaxiDepot[] taxiDepotsSort = new TaxiDepot[]{minivan1, freight1, passenger1};
-        Assertions.assertArrayEquals(taxiDepotsSort, taxiDepotOperation.getTaxiDepots());
+        TaxiDepot[] taxiDepotForSort = taxiDepotOperation.getTaxiDepots();
+        boolean sort = true;
+        for (int i = 1; i < taxiDepotForSort.length; i++) {
+            if (taxiDepotForSort[i].consumption < taxiDepotForSort[i - 1].consumption) {
+                sort = false;
+                break;
+            }
+        }
+        Assertions.assertTrue(sort);
     }
+
 
     @Test
     void findBySpeed() {
-        TaxiDepot[] taxiDepots = taxiDepotOperation.findBySpeed(4, 11);
-        Freight freight1 = new Freight(1000, 100, 10, "Black");
-        Minivan minivan1 = new Minivan(500, 50, 5, 100);
-        TaxiDepot[] taxiDepotsSort = new TaxiDepot[]{freight1, minivan1};
-        Assertions.assertArrayEquals(taxiDepotsSort, taxiDepots);
-
-
+        int minSpeed = 4;
+        int maxSpeed = 11;
+        TaxiDepot[] taxiDepots = taxiDepotOperation.findBySpeed(minSpeed, maxSpeed);
+        boolean result = true;
+        for (TaxiDepot taxiDepot : taxiDepots) {
+            if (taxiDepot.speed < minSpeed || taxiDepot.speed > maxSpeed) {
+                result = false;
+                break;
+            }
+        }
+        Assertions.assertTrue(result);
     }
 }
