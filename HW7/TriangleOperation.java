@@ -1,3 +1,5 @@
+package com.nikitchyn.homework7;
+
 public class TriangleOperation {
     private Triangle[] triangles;
 
@@ -14,7 +16,7 @@ public class TriangleOperation {
         for (int i = 0; i < difGroup.length; i++) {
             if (difGroup[i] > 0) {
                 Triangle maxSquareTriangle = getTriangleMaxForGroup(i);
-                System.out.println("Type " + maxSquareTriangle.getTextTypeTriangle(i) + " max square " + maxSquareTriangle.getSquare());
+                System.out.println("Type " + getTextTypeTriangle(i) + " max square " + maxSquareTriangle.getSquare());
             }
         }
     }
@@ -41,7 +43,7 @@ public class TriangleOperation {
         for (int i = 0; i < difGroup.length; i++) {
             if (difGroup[i] > 0) {
                 Triangle maxPerimeterTriangle = getMaxPerimeter(i);
-                System.out.println("Type " + maxPerimeterTriangle.getTextTypeTriangle(i) + " max perimeter " + maxPerimeterTriangle.getPerimeter());
+                System.out.println("Type " + getTextTypeTriangle(i) + " max perimeter " + maxPerimeterTriangle.getPerimeter());
             }
         }
     }
@@ -68,7 +70,7 @@ public class TriangleOperation {
         for (int i = 0; i < difGroup.length; i++) {
             if (difGroup[i] > 0) {
                 Triangle minPerimeterTriangle = getMinPerimeter(i);
-                System.out.println("Type " + minPerimeterTriangle.getTextTypeTriangle(i) + " min perimeter " + minPerimeterTriangle.getPerimeter());
+                System.out.println("Type " + getTextTypeTriangle(i) + " min perimeter " + minPerimeterTriangle.getPerimeter());
             }
         }
     }
@@ -95,7 +97,7 @@ public class TriangleOperation {
         for (int i = 0; i < difGroup.length; i++) {
             if (difGroup[i] > 0) {
                 Triangle minSquareTriangle = getTriangleMinForGroup(i);
-                System.out.println("Type " + minSquareTriangle.getTextTypeTriangle(i) + " min square " + minSquareTriangle.getSquare());
+                System.out.println("Type " + getTextTypeTriangle(i) + " min square " + minSquareTriangle.getSquare());
             }
         }
     }
@@ -122,7 +124,7 @@ public class TriangleOperation {
 
         for (int i = 0; i < difGroup.length; i++) {
             if (difGroup[i] != 0) {
-                System.out.println("type " + i + " count " + difGroup[i]);
+                System.out.println("type " + getTextTypeTriangle(i) + " count " + difGroup[i]);
             }
 
         }
@@ -138,4 +140,19 @@ public class TriangleOperation {
         }
         return group;
     }
+
+    public String getTextTypeTriangle(int type) {
+        String typeTriangle;
+        if (type == 1) {
+            typeTriangle = "equilateral";
+        } else if (type == 2) {
+            typeTriangle = "isosceles";
+        } else if (type == 3) {
+            typeTriangle = "rectangular";
+        } else {
+            typeTriangle = "arbitrary";
+        }
+        return typeTriangle;
+    }
+
 }

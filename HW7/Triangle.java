@@ -69,20 +69,6 @@ public class Triangle {
         return perimeter;
     }
 
-    public String getTextTypeTriangle(int type) {
-        String typeTriangle;
-        if (type == 1) {
-            typeTriangle = "equilateral";
-        } else if (type == 2) {
-            typeTriangle = "isosceles";
-        } else if (type == 3) {
-            typeTriangle = "rectangular";
-        } else {
-            typeTriangle = "arbitrary";
-        }
-        return typeTriangle;
-    }
-
     private double lengthSide(Point a, Point b) {
         return Math.sqrt(Math.pow((a.getX() - b.getX()), 2) +
                 Math.pow((a.getY() - b.getY()), 2));
