@@ -24,7 +24,6 @@ public class TaxiDepotOperation {
     }
 
     public void sortByConsumption() {
-
         for (int i = taxiDepots.length - 1; i > 0; i--) {
             for (int j = 0; j < i; j++) {
                 if (taxiDepots[j].consumption > taxiDepots[j + 1].consumption) {
@@ -34,7 +33,6 @@ public class TaxiDepotOperation {
                 }
             }
         }
-
     }
 
 
@@ -56,7 +54,7 @@ public class TaxiDepotOperation {
 
     private TaxiDepot[] addTaxi(TaxiDepot[] newTaxiDepots, TaxiDepot newTaxiDepot) {
         int countTaxiDepots = newTaxiDepots.length + 1;
-        TaxiDepot[] addTaxiDepots = new TaxiDepot[newTaxiDepots.length + 1];
+        TaxiDepot[] addTaxiDepots = new TaxiDepot[countTaxiDepots+ 1];
         for (int i = 0; i < countTaxiDepots - 1; i++) {
             addTaxiDepots[i] = newTaxiDepots[i];
         }
