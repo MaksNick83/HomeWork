@@ -129,7 +129,7 @@ public class TriangleOperation {
     }
 
     private int[] getCountDifGroup() {
-        int[] group = new int[10];
+        int[] group = new int[triangles.length+1];
 
         for (Triangle triangle : triangles) {
             if (triangle.getType() != 0) {
