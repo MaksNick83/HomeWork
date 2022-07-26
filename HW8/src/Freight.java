@@ -1,4 +1,3 @@
-package com.nikitchyn.homework8;
 
 public class Freight extends TaxiDepot {
     private String color;

@@ -1,5 +1,3 @@
-package com.nikitchyn.homework8;
-
 
 abstract class TaxiDepot {
     int cost;

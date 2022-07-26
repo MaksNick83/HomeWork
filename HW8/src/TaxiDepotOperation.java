@@ -1,4 +1,3 @@
-package com.nikitchyn.homework8;
 
 public class TaxiDepotOperation {
     private TaxiDepot[] taxiDepots;

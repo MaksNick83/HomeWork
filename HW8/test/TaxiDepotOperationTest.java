@@ -1,4 +1,3 @@
-package com.nikitchyn.homework8;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;

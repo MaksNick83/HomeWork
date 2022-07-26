@@ -1,5 +1,3 @@
-package com.nikitchyn.homework8;
-
 import java.util.Objects;
 
 public class Minivan extends TaxiDepot {

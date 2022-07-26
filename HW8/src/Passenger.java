@@ -1,5 +1,3 @@
-package com.nikitchyn.homework8;
-
 public class Passenger extends TaxiDepot {
     private int seatsNumber;
 
