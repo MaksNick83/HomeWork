@@ -1,5 +1,5 @@
+package com.nikitchyn.homework8;
 
-import java.util.Objects;
 
 abstract class TaxiDepot {
     int cost;

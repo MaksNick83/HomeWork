@@ -1,3 +1,4 @@
+package com.nikitchyn.homework8;
 
 public class TaxiDepotOperation {
     private TaxiDepot[] taxiDepots;
@@ -10,6 +11,10 @@ public class TaxiDepotOperation {
         this.taxiDepots = new TaxiDepot[]{};
     }
 
+    public TaxiDepot[] getTaxiDepots() {
+        return taxiDepots;
+    }
+
     public double totalCost() {
         double cost = 0;
         for (TaxiDepot taxiDepot : taxiDepots) {
@@ -19,7 +24,7 @@ public class TaxiDepotOperation {
         return cost;
     }
 
-    public TaxiDepot[] sortByConsumption() {
+    public void sortByConsumption() {
 
         for (int i = taxiDepots.length - 1; i > 0; i--) {
             for (int j = 0; j < i; j++) {
@@ -30,7 +35,7 @@ public class TaxiDepotOperation {
                 }
             }
         }
-        return taxiDepots;
+
     }
 
     public void printTaxiDepots(TaxiDepot[] taxiDepots) {

@@ -1,3 +1,4 @@
+package com.nikitchyn.homework8;
 
 import java.util.Objects;
 
@@ -12,7 +13,7 @@ public class Minivan extends TaxiDepot {
     @Override
     public String toString() {
         return "Minivan{" +
-                "height='" + height + '\'' +
+                "height=" + height +
                 ", cost=" + cost +
                 ", consumption=" + consumption +
                 ", speed=" + speed +
