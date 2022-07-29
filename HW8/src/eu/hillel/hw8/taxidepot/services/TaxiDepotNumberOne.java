@@ -1,7 +1,7 @@
-package eu.hillel.hw8.taxidepot.functional;
+package eu.hillel.hw8.taxidepot.services;
 
 
-import eu.hillel.hw8.taxidepot.properties.MotorTransport;
+import eu.hillel.hw8.taxidepot.datamashines.MotorTransport;
 
 public class TaxiDepotNumberOne implements TaxiDepot {
     private MotorTransport[] motorTransports;

@@ -1,4 +1,4 @@
-package eu.hillel.hw8.taxidepot.properties;
+package eu.hillel.hw8.taxidepot.datamashines;
 
 
 public abstract class MotorTransport {
@@ -6,7 +6,7 @@ public abstract class MotorTransport {
      int consumption;
      int speed;
 
-    public MotorTransport(int cost, int consumption, int speed) {
+    protected MotorTransport(int cost, int consumption, int speed) {
         this.cost = cost;
         this.consumption = consumption;
         this.speed = speed;

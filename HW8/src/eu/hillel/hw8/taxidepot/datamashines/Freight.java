@@ -1,7 +1,5 @@
-package eu.hillel.hw8.taxidepot.typeauto;
+package eu.hillel.hw8.taxidepot.datamashines;
 
-
-import eu.hillel.hw8.taxidepot.properties.MotorTransport;
 
 public class Freight extends MotorTransport {
     private String color;

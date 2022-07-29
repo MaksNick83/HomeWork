@@ -1,7 +1,5 @@
-package eu.hillel.hw8.taxidepot.typeauto;
+package eu.hillel.hw8.taxidepot.datamashines;
 
-
-import eu.hillel.hw8.taxidepot.properties.MotorTransport;
 
 public class Minivan extends MotorTransport {
     private int height;

@@ -1,10 +1,10 @@
-package eu.hillel.hw8.taxidepot.functional;
+package eu.hillel.hw8.taxidepot.services;
 
 
-import eu.hillel.hw8.taxidepot.properties.MotorTransport;
-import eu.hillel.hw8.taxidepot.typeauto.Freight;
-import eu.hillel.hw8.taxidepot.typeauto.Minivan;
-import eu.hillel.hw8.taxidepot.typeauto.Passenger;
+import eu.hillel.hw8.taxidepot.datamashines.MotorTransport;
+import eu.hillel.hw8.taxidepot.datamashines.Freight;
+import eu.hillel.hw8.taxidepot.datamashines.Minivan;
+import eu.hillel.hw8.taxidepot.datamashines.Passenger;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

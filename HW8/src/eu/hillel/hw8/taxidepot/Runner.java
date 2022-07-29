@@ -1,11 +1,11 @@
 package eu.hillel.hw8.taxidepot;
 
-import eu.hillel.hw8.taxidepot.functional.TaxiDepot;
-import eu.hillel.hw8.taxidepot.functional.TaxiDepotNumberOne;
-import eu.hillel.hw8.taxidepot.properties.MotorTransport;
-import eu.hillel.hw8.taxidepot.typeauto.Freight;
-import eu.hillel.hw8.taxidepot.typeauto.Minivan;
-import eu.hillel.hw8.taxidepot.typeauto.Passenger;
+import eu.hillel.hw8.taxidepot.services.TaxiDepot;
+import eu.hillel.hw8.taxidepot.services.TaxiDepotNumberOne;
+import eu.hillel.hw8.taxidepot.datamashines.MotorTransport;
+import eu.hillel.hw8.taxidepot.datamashines.Freight;
+import eu.hillel.hw8.taxidepot.datamashines.Minivan;
+import eu.hillel.hw8.taxidepot.datamashines.Passenger;
 
 public class Runner {
     public static void main(String[] args) {
