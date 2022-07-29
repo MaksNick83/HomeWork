@@ -1,5 +1,9 @@
+package eu.hillel.hw8.taxidepot.typeauto;
 
-public class Freight extends TaxiDepot {
+
+import eu.hillel.hw8.taxidepot.properties.MotorTransport;
+
+public class Freight extends MotorTransport {
     private String color;
 
     public Freight(int cost, int consumption, int speed, String color) {
@@ -11,9 +15,9 @@ public class Freight extends TaxiDepot {
     public String toString() {
         return "Freight{" +
                 "color='" + color + '\'' +
-                ", cost=" + cost +
-                ", consumption=" + consumption +
-                ", speed=" + speed +
+                ", cost=" + getCost() +
+                ", consumption=" + getConsumption() +
+                ", speed=" + getSpeed() +
                 '}';
     }
 
