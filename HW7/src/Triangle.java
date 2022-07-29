@@ -29,22 +29,22 @@ public class Triangle {
         this.lengthA = lengthSide(a, b);
         this.lengthB = lengthSide(b, c);
         this.lengthC = lengthSide(a, c);
-        this.type = setTypeTriangle();
-        this.perimeter = setPerimeter();
-        this.square = setSquare();
+        this.type = typeTriangle();
+        this.perimeter = perimeter();
+        this.square = square();
 
     }
 
-    private double setSquare() {
+    private double square() {
         double poluPerimetr = (lengthA + lengthB + lengthC) / 2;
         return Math.pow((poluPerimetr * (poluPerimetr - lengthA) * (poluPerimetr - lengthB) * (poluPerimetr - lengthC)), 0.5);
     }
 
-    private double setPerimeter() {
+    private double perimeter() {
         return lengthA + lengthB + lengthC;
     }
 
-    private int setTypeTriangle() {
+    private int typeTriangle() {
 
         if (lengthA == lengthB && lengthB == lengthC && lengthA == lengthC) {
             return 1;
