@@ -1,4 +1,4 @@
-public class Main {
+public class MainStart {
 
     public static void main(String[] args) {
         Triangle tringle1 = new Triangle(new Point(.0, .0), new Point(1, 2), new Point(3, .0));
