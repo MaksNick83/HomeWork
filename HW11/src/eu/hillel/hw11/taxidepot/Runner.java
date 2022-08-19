@@ -7,7 +7,7 @@ import eu.hillel.hw11.taxidepot.services.*;
 
 public class Runner {
     public static void main(String[] args) {
-        String fileIn = "HW11/resources/carsIn2.txt";
+        String fileIn = "HW11/resources/carsIn.txt";
         String fileOut = "HW11/resources/carsOut.txt";
         FileReader fileReader = new FileReaderImpl();
         FileWriter fileWriter = new FileWriterImpl();
