@@ -3,6 +3,7 @@ package eu.hillel.hw11.taxidepot;
 
 import eu.hillel.hw11.taxidepot.data.MotorTransport;
 import eu.hillel.hw11.taxidepot.exception.OpenFileException;
+import eu.hillel.hw11.taxidepot.exception.WriteFileException;
 import eu.hillel.hw11.taxidepot.services.*;
 
 public class Runner {
@@ -36,7 +37,11 @@ public class Runner {
         taxiDepotNumberOne.printTaxiDepots(motorTransports);
         System.out.println("Taxi depot find  Speed :");
         taxiDepotNumberOne.printTaxiDepots(taxiDepotNumberOne.findBySpeed(100, 130));
-        fileWriter.write(reportGenerator.generateReport(motorTransports), fileOut);
+        try {
+            fileWriter.write(reportGenerator.generateReport(motorTransports), fileOut);
+        } catch (WriteFileException e) {
+            System.out.println(e.getMessage());
+        }
 
 
     }
