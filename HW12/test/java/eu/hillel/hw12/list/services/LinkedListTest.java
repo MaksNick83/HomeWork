@@ -24,10 +24,6 @@ class LinkedListTest {
         Assertions.assertEquals(14, nodeLast.getValue());
     }
 
-    @Test
-    void addByIndexTest() {
-
-    }
 
     @Test
     void deleteFirstTest() {
@@ -43,10 +39,6 @@ class LinkedListTest {
         Assertions.assertEquals(4, nodeLast.getValue());
     }
 
-    @Test
-    void deleteByIndexTest() {
-
-    }
 
     @Test
     void moveTest() {
@@ -62,8 +54,5 @@ class LinkedListTest {
 
     }
 
-    @Test
-    void isEmptyTest() {
 
-    }
 }
