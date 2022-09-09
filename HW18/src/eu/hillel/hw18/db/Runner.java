@@ -10,9 +10,13 @@ import java.util.Collections;
 import java.util.Properties;
 
 public class Runner {
-    public static void main(String[] args) throws SQLException, IOException {
-        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/testphone", "root", "root");
+    public static void main(String[] args) throws Exception {
+      Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/testphone", "root", "root");
         System.out.println(connection.getMetaData().getDatabaseProductName());
         connection.close();
+        System.out.println("It is ok");
+
+
     }
+
 }

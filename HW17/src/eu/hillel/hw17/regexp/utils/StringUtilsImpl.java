@@ -34,7 +34,7 @@ public class StringUtilsImpl implements StringUtils {
         String[] words = getWords(" ", text);
         for (String word : words) {
             if (word.length() >= k) {
-                stringBuilder.append(word.substring(0, k - 1)).append(symbolReplace).append(word.substring(k, word.length()));
+                stringBuilder.append(word, 0, k - 1).append(symbolReplace).append(word.substring(k));
             } else {
                 stringBuilder.append(word);
             }
@@ -45,7 +45,6 @@ public class StringUtilsImpl implements StringUtils {
 
     public String getWordsFirstLastLettersSame(String text) {
         StringBuilder stringBuilder = new StringBuilder();
-        text.strip();
         String[] words = getWords("[ !.,;:?]", text);
         for (String word : words) {
             if ((word.length() > 1) && word.charAt(0) == word.charAt(word.length() - 1) && (stringBuilder.indexOf(word) == -1)) {
