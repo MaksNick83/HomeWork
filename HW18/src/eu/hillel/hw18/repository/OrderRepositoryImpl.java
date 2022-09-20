@@ -205,7 +205,7 @@ public class OrderRepositoryImpl implements OrderRepository {
             System.err.println("Can not create Order:" + e.getMessage());
             connection.rollback();
         } finally {
-            connection.close();
+            closeConnection(connection);
         }
     }
 
@@ -262,7 +262,7 @@ public class OrderRepositoryImpl implements OrderRepository {
             System.err.println("Can not create Order:" + e.getMessage());
             connection.rollback();
         } finally {
-            connection.close();
+            closeConnection(connection);
         }
 
 
