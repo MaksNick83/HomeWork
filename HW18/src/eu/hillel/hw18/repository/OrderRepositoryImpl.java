@@ -314,7 +314,7 @@ public class OrderRepositoryImpl implements OrderRepository {
                 Nomenclature nomenclature = new Nomenclature(nomunclatureId, resultSet.getString("name"), resultSet.getString("description"), resultSet.getDouble("price"));
                 orderNomenclatures.add(new OrderNomenclature(nomenclature, resultSet.getDouble("count")));
             }
-            if (orderCurrent != 0) {
+            if (orderCurrent != 0 && orderNomenclatures.size() != 0) {
                 order.setOrderNomenclatures(orderNomenclatures);
             }
 

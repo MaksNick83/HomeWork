@@ -16,15 +16,15 @@ public class Runner {
         System.out.println(orderService.getByNumber("104"));
         System.out.println("---AllWithSumLesserOrEqualAndNumberNomenclature-----");
         for (Order order : orderService.getAllWithSumLesserOrEqualAndNumberNomenclature(10.0, 2)) {
-            System.out.println("Number order:" + order.getNumber());
+            System.out.println("Number order:" + order.getNumber()+"Id: "+order.getId());
         }
         System.out.println("---Containing Nomenclature----");
         for (Order order : orderService.getAllContainingGivenNomenclature("modem")) {
-            System.out.println("Number order:" + order.getNumber());
+            System.out.println("Number order:" + order.getNumber()+"Id: "+order.getId());
         }
         System.out.println("---No Containing Nomenclature----");
         for (Order order : orderService.getAllNotContainProductAndArrivedDuringCurrentDay("modem")) {
-            System.out.println("Number order:" + order.getNumber());
+            System.out.println("Number order:" + order.getNumber()+"Id: "+order.getId());
         }
         orderService.createOfItemsCurrentDay("104");
 
