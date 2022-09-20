@@ -38,7 +38,7 @@ public class OrderRepositoryImpl implements OrderRepository {
 
     public List<Order> getAllByDate(LocalDate localDate) {
         String queryByOrderNumber = """
-                SELECT\s
+                SELECT
                     orders.number,
                     orders.id order_id,
                     orders.date,
@@ -141,7 +141,7 @@ public class OrderRepositoryImpl implements OrderRepository {
 
     public List<Order> getAllNotContainProductAndArrivedDuringDay(String nameNomenclature, LocalDate localDate) {
         String query = """
-                 SELECT\s
+                 SELECT
                      filter_order.id order_id,
                      filter_order.date,
                      filter_order.number,
@@ -253,7 +253,7 @@ public class OrderRepositoryImpl implements OrderRepository {
             String query2 = "DELETE FROM orders (id) VALUES (?)";
             PreparedStatement statement2 = connection.prepareStatement(query2);
             statement.setString(1, orderIdForDelete);
-            statement.executeUpdate();
+            statement2.executeUpdate();
             connection.commit();
         } catch (SQLException e) {
             System.err.println("Can not create Order:" + e.getMessage());

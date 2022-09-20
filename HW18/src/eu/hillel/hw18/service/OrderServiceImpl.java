@@ -31,20 +31,19 @@ public class OrderServiceImpl implements OrderService {
 
     public List<Order> getAllNotContainProductAndArrivedDuringCurrentDay(String nameNomenclature) {
         LocalDate localDate = LocalDate.now();
-        return orderRepository.getAllNotContainProductAndArrivedDuringDay(nameNomenclature,localDate);
+        return orderRepository.getAllNotContainProductAndArrivedDuringDay(nameNomenclature, localDate);
     }
 
     public void createOfItemsCurrentDay(String number) {
-        LocalDate localDate=LocalDate.now();
+        LocalDate localDate = LocalDate.now();
         List<Order> orders = orderRepository.getAllByDate(localDate);
         if (orders.size() == 0) {
             return;
         }
-        Order order = new Order(number);
+        Order order = new Order(localDate, number);
         List<OrderNomenclature> orderNomenclatures = new ArrayList<>();
 
         for (Order order1 : orders) {
-            order.setDate(order1.getDate());
             for (OrderNomenclature orderNomenclature : order1.getOrderNomenclatures()) {
                 orderNomenclatures.add(orderNomenclature);
             }
