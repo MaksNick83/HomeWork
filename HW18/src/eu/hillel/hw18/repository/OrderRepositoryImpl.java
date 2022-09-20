@@ -101,7 +101,7 @@ public class OrderRepositoryImpl implements OrderRepository {
                       shop.order_nomenclatures order_nomenclatures_ ON order_nomenclatures_.order_id = filterOrder.order_id
                           INNER JOIN
                       shop.nomenclatures nomenclatures ON nomenclatures.id = order_nomenclatures_.nomunclature_id
-                                
+                 ORDER BY order_id               
                 """;
 
         String[] parameters = {String.valueOf(cost), String.valueOf(countNomenclature)};
@@ -133,6 +133,7 @@ public class OrderRepositoryImpl implements OrderRepository {
                      shop.order_nomenclatures order_nomenclatures ON order_nomenclatures.order_id = filter_order.id
                          INNER JOIN
                      shop.nomenclatures nomenclatures ON nomenclatures.id = order_nomenclatures.nomunclature_id
+                ORDER BY order_id
                 """;
 
         String[] parameters = {nameNomenclature};
@@ -165,6 +166,7 @@ public class OrderRepositoryImpl implements OrderRepository {
                      shop.order_nomenclatures order_nomenclatures ON order_nomenclatures.order_id = filter_order.id
                          INNER JOIN
                      shop.nomenclatures nomenclatures ON nomenclatures.id = order_nomenclatures.nomunclature_id
+                ORDER BY order_id
                 """;
 
         String[] parameters = {nameNomenclature, localDate.toString()};
@@ -233,6 +235,7 @@ public class OrderRepositoryImpl implements OrderRepository {
                     shop.order_nomenclatures order_nomenclatures ON order_nomenclatures.order_id = filter_order.id
                         INNER JOIN
                     shop.nomenclatures nomenclatures ON nomenclatures.id = order_nomenclatures.nomunclature_id
+                ORDER BY order_id
                 """;
 
         String[] parameters = {nameNomenclature, String.valueOf(quantity)};
