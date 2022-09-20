@@ -292,9 +292,12 @@ public class OrderRepositoryImpl implements OrderRepository {
         Order order = null;
         int orderPrev = 0;
         int orderCurrent = 0;
+        int nomunclatureId = 0;
         try {
             while (resultSet.next()) {
                 orderCurrent = resultSet.getInt("order_id");
+                nomunclatureId = resultSet.getInt("nomunclature_id");
+
                 if (orderPrev != orderCurrent) {
                     if (orderPrev != 0) {
                         order.setOrderNomenclatures(orderNomenclatures);
@@ -305,7 +308,10 @@ public class OrderRepositoryImpl implements OrderRepository {
                     orderNomenclatures = new ArrayList<>();
                     orderPrev = orderCurrent;
                 }
-                Nomenclature nomenclature = new Nomenclature(resultSet.getInt("nomunclature_id"), resultSet.getString("name"), resultSet.getString("description"), resultSet.getDouble("price"));
+                if (nomunclatureId == 0) {
+                    continue;
+                }
+                Nomenclature nomenclature = new Nomenclature(nomunclatureId, resultSet.getString("name"), resultSet.getString("description"), resultSet.getDouble("price"));
                 orderNomenclatures.add(new OrderNomenclature(nomenclature, resultSet.getDouble("count")));
             }
             if (orderCurrent != 0) {
