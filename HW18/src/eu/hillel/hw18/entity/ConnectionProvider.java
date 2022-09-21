@@ -1,4 +1,4 @@
-package eu.hillel.hw18.connection;
+package eu.hillel.hw18.entity;
 
 import java.io.FileInputStream;
 import java.io.IOException;

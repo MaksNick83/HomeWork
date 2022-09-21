@@ -12,8 +12,6 @@ public class Order {
     private int id;
     private List<OrderNomenclature> orderNomenclatures = new ArrayList<>();
 
-
-
     public int getId() {
         return id;
     }
