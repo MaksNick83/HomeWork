@@ -4,7 +4,6 @@ public class OrderNomenclature {
     private Nomenclature nomenclature;
     private double count;
 
-
     public OrderNomenclature(Nomenclature nomenclature, double count) {
         this.nomenclature = nomenclature;
         this.count = count;

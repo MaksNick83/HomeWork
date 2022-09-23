@@ -1,6 +1,6 @@
 package eu.hillel.hw18.repository;
 
-import eu.hillel.hw18.entity.ConnectionProvider;
+import eu.hillel.hw18.connection.ConnectionProvider;
 import eu.hillel.hw18.entity.Nomenclature;
 import eu.hillel.hw18.entity.Order;
 import eu.hillel.hw18.entity.OrderNomenclature;

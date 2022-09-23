@@ -18,7 +18,7 @@ public interface OrderRepository {
 
     void createOrder(Order order) throws Exception;
 
-    List<Order> SpecifiedQuantitySpecifiedProduct(String nameNomenclature,int quantity);
+    List<Order> SpecifiedQuantitySpecifiedProduct(String nameNomenclature, int quantity);
 
     void deleteOrder(Order order) throws Exception;
 
