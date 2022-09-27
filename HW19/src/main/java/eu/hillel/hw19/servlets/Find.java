@@ -24,6 +24,7 @@ public class Find extends HttpServlet {
                     .filter(wordToFind::equals)
                     .count();
         }
+        is.close();
         resp.getWriter().println("Word: " + wordToFind + " count: " + count);
     }
 
