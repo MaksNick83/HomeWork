@@ -1,0 +1,9 @@
+<ul>
+	<li style="display: inline; border-style: solid; padding: 5pt;"><a href="/HW20">Index</a></li>
+	<li style="display: inline; border-style: solid; padding: 5pt;"><a href="/HW20/getByNumber">Find By Number </a></li>
+	<li style="display: inline; border-style: solid; padding: 5pt;"><a href="/HW20/getAllWithSumLesserOrEqualAndNumberNomenclature">Find with sum lesser or equal and nomenclature</a></li>
+	<li style="display: inline; border-style: solid; padding: 5pt;"><a href="/HW20/getAllContainingGivenNomenclature">Find all containing given nomenclature</a></li>
+	<li style="display: inline; border-style: solid; padding: 5pt;"><a href="/HW20/getAllNotContainProductAndArrivedDuringCurrentDay">Find all not contain product and arrived during current day</a></li>
+	<li style="display: inline; border-style: solid; padding: 5pt;"><a href="/HW20/createOfItemsCurrentDay">Create of items current day</a></li>
+	<li style="display: inline; border-style: solid; padding: 5pt;"><a href="/HW20/deleteAllOrdersSpecifiedQuantityAndSpecifiedProduct">Delete all orders specified quantity and specified product</a></li>
+</ul>
