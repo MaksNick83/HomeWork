@@ -4,7 +4,7 @@ import java.util.Stack;
 
 public class ValueConverter {
 
-    public  String convertToPostfix(String expression) {
+    public String convertToPostfix(String expression) {
         StringBuilder sb = new StringBuilder();
         Stack<Character> op = new Stack<Character>();
         char[] chars = expression.toCharArray();
@@ -80,11 +80,11 @@ public class ValueConverter {
         return operands.pop();
     }
 
-    private  boolean isOperator(char ch) {
+    private boolean isOperator(char ch) {
         return ch == '^' || ch == '*' || ch == '/' || ch == '+' || ch == '-';
     }
 
-    private  int priority(char operator) {
+    private int priority(char operator) {
         switch (operator) {
             case '^':
                 return 3;

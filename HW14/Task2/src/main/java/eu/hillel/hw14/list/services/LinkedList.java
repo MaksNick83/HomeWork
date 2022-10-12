@@ -4,7 +4,7 @@ import eu.hillel.hw14.list.data.Node;
 
 import java.util.Iterator;
 
-public class LinkedList<T> implements Iterable<T>{
+public class LinkedList<T> implements Iterable<T> {
     private Node<T> head;
     private int size = 0;
 
@@ -123,7 +123,7 @@ public class LinkedList<T> implements Iterable<T>{
         StringBuilder builder = new StringBuilder();
         Node<T> pointerToNode = head;
         while (pointerToNode != null) {
-            builder.append(pointerToNode.getValue()+" ");
+            builder.append(pointerToNode.getValue() + " ");
             pointerToNode = pointerToNode.getNext();
         }
         return "LinkedList{" + builder.toString() + '}';

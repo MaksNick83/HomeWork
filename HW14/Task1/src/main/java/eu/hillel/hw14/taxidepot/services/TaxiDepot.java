@@ -7,7 +7,6 @@ import java.util.List;
 
 public interface TaxiDepot {
 
-
     int totalCost();
 
     void sortByConsumption();
